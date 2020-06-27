@@ -74,7 +74,7 @@ public class Painting {
 	
 	/**
 	 * Determine if the painting is owned
-	 * @return Wether or not the painting is owned
+	 * @return whether or not the painting is owned
 	 */
 	public Boolean getOwned()
 	{
@@ -120,7 +120,7 @@ public class Painting {
 	}
 	
 	/**
-	 * Array consiting of the price range for this painting:
+	 * Array consisting of the price range for this painting:
 	 * (70% of the time the price will be in this range)
 	 * 
 	 * index 0: Lower price range of the painting 

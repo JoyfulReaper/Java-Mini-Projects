@@ -100,27 +100,28 @@ public class ArtAuction
 		int numberOfOffers = random.nextInt(6);
 		int profit = 0;
 		
-		System.out.println("-------- Selling Paintings --------\n");
+		System.out.println("-------- Selling Paintings --------");
 		
 		for(int i = 0; i < paintings.size(); i++)
 		{
 			if(!paintings.get(i).getOwned())
 				continue;
 			
-			System.out.println("Selling Painting #" + (i + 1));
+			System.out.println("\nSelling Painting #" + (i + 1));
 			System.out.println("You bought it for $" + paintings.get(i).getPricePaid());
 			System.out.println("The average offer is: $" + (paintings.get(i).getPrice() + 50));
 			for(int j = 0; j < numberOfOffers; j++)
 			{
 				int offer = Auction.getOfferOnPainting(paintings.get(i));
 				System.out.println("Offer: #" + (j + 1) + " is " + offer);
-				System.out.println("Accept this offer? ");
+				System.out.print("Accept this offer? ");
 				if(in.next().toUpperCase().startsWith("Y"))
 				{
 					paintings.get(i).setOwned(false);
-					profit += paintings.get(i).getPricePaid();
+					profit += offer - paintings.get(i).getPricePaid();
 					break;
 				}
+				System.out.println();
 			}
 		}
 		return profit;
