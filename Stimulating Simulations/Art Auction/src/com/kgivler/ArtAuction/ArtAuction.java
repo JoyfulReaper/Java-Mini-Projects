@@ -163,9 +163,11 @@ public class ArtAuction
 	{
 		int input = -1;
 		try {
-			input = in.nextInt();
+			input = Integer.parseInt(in.nextLine());
 		} catch (InputMismatchException e) {
 			in.nextLine();
+		} catch (NumberFormatException e)
+		{
 		}
 		return input;
 	}
