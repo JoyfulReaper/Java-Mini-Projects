@@ -113,7 +113,7 @@ public class ArtAuction
 			for(int j = 0; j < numberOfOffers; j++)
 			{
 				int offer = Auction.getOfferOnPainting(paintings.get(i));
-				System.out.println("Offer: #" + (j + 1) + " is " + offer);
+				System.out.println("Offer: #" + (j + 1) + " is $" + offer);
 				System.out.print("Accept this offer? ");
 				if(in.next().toUpperCase().startsWith("Y"))
 				{
