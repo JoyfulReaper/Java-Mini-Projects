@@ -1,11 +1,18 @@
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class StringReverse
 {
     public static void main(String[] args)
     {
-        Scanner in = new Scanner(System.in);
+        if(args[0].equals("-G") || args[0].equals("-g"))
+        {
+            String input = JOptionPane.showInputDialog("Enter a string to reverse");
+            JOptionPane.showMessageDialog(null, reverseStringSB(input), "Reversed String", JOptionPane.PLAIN_MESSAGE); 
+            System.exit(0);
+        }
 
+        Scanner in = new Scanner(System.in);
         System.out.println("Enter a string to reverse: ");
         String input = in.nextLine();
 
